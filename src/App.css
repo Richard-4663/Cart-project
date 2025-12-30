@@ -1,3 +1,7 @@
+:root{
+  --corTema: #667eea;
+}
+
 .wrapper{
   width: 65%;
   margin: 0;
@@ -5,22 +9,14 @@
   text-align: center;
   min-height: 100vh;
   min-width: 100vw;
-  background: linear-gradient(to bottom, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(to bottom, var(--corTema) 0%, #764ba2 100%);
   display: flex;
   justify-content: center;
   padding: 2em;
 }
 
-header{
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  padding: 3em;
-  border-start-end-radius: 20px;
-  border-start-start-radius: 20px;
-  color: white;
-}
-
 .continuacao{
-  height: 80%;
+  height: 95%;
   border-bottom-left-radius: 20px ;
   border-bottom-right-radius: 20px ;
   display: grid;
@@ -35,8 +31,4 @@ header{
   padding: 0;
   border-start-end-radius: 20px;
   border-start-start-radius: 20px;
-}
-
-.products{
-  border: 1px solid black;
 }
