@@ -1,9 +1,9 @@
 import 'bootstrap/dist/css/bootstrap.min.css'
 import 'bootstrap/dist/js/bootstrap.bundle.min'
 import './App.css'
-import Header from './components/Header/Header'
-import Products from './components/Products/Products'
-import Cart from './components/Cart/Cart'
+import Header from './components/Header/Header.jsx'
+import Products from './components/Products/Products.jsx'
+import Cart from './components/Cart/Cart.jsx'
 
 function App() {
 
