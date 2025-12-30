@@ -6,7 +6,7 @@ export default function Products({produtos}){
         <div className="products p-4 text-start rounded-3">
             <h2>Produtos disponiveis</h2>
             <hr className="bg-purple"/>
-            <div className="Btns d-flex gap-4">
+            <div className="Btns d-flex gap-4 flex-wrap">
                 <Button text={'Todos'} />
                 <Button text={'Eletronicos'}/>
                 <Button text={'Roupas'}/>

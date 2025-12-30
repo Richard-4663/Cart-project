@@ -40,9 +40,9 @@ function App() {
 
   return (
     <div className="wrapper">
-      <div className='container' style={{width: 1200}}>
+      <div className='app-container'>
         <Header />  
-        <div className='continuacao bg-light'>
+        <div className='content bg-light'>
           <Products produtos={produtos}/>
           <Cart itemCart={produtosCarrinho} />
         </div>

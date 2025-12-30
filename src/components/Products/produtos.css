@@ -1,6 +1,14 @@
 .products{
   background-color: rgb(233, 232, 232);
+  width: 99%;
 }
+
+@media (max-width: 380px) {
+    .products{
+        grid-template-columns: 1fr;  
+        width: 300px;
+    }
+} 
 
 .items {
     display: grid;
