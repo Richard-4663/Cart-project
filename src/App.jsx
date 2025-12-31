@@ -4,6 +4,8 @@ import './App.css'
 import Header from './components/Header/Header.jsx'
 import Products from './components/Products/Products.jsx'
 import Cart from './components/Cart/Cart.jsx'
+import { useState } from 'react'
+
 
 function App() {
 
@@ -24,8 +26,53 @@ function App() {
     {id: 14, nome: "Console PlayStation 5", preco: 3999.90, categoria: "eletronico", qntEstoque: 2, quantidadeCarrinho: 0, resultadoQtnCar: 0}
 ];
 
-  let produtosCarrinho = []
+  const [produtosCarrinho, setProdutosCarrinho] = useState([])
 
+
+  function AddItemCart(produto){
+
+    const ItemExist = produtosCarrinho.find(item => item.id == produto.id)
+
+    if (ItemExist){
+      alert("item já está no carrinho")
+    }else{
+      produto.quantidadeCarrinho = 1
+      setProdutosCarrinho([...produtosCarrinho, produto])
+    }
+  }
+
+  function removeItemCart(id){
+    const filtro = produtosCarrinho.filter(produto => produto.id != id)
+    setProdutosCarrinho(filtro)
+  }
+
+
+  //ESTUDAR ISSO AQUI URGENTEMENTE
+  const incrementQuantity = (itemId) => {
+    setProdutosCarrinho(prevCart =>
+      prevCart.map(item =>
+        item.id === itemId
+          ? { ...item, quantidadeCarrinho: item.quantidadeCarrinho + 1 }
+          : item
+      )
+    );
+  };
+
+    const decrementQuantity = (itemId) => {
+    setProdutosCarrinho(prevCart =>
+      prevCart.map(item => {
+        if (item.id === itemId) {
+          const newQuantity = item.quantidadeCarrinho - 1;
+          if (newQuantity <= 0) {
+            // Remove o item se chegar a 0
+            return null;
+          }
+          return { ...item, quantidadeCarrinho: newQuantity };
+        }
+        return item;
+      }).filter(Boolean) // Remove nulls
+    );
+  };
 
 
   return (
@@ -33,8 +80,8 @@ function App() {
       <div className='app-container'>
         <Header />  
         <div className='content bg-light'>
-          <Products produtos={produtos}/>
-          <Cart itemCart={produtosCarrinho} />
+          <Products produtos={produtos} onClick={AddItemCart}/>
+          <Cart itemCart={produtosCarrinho} onClick={removeItemCart} increment={incrementQuantity} decrement={decrementQuantity} />
         </div>
       </div>
         

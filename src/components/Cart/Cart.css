@@ -59,50 +59,9 @@
     margin-left: 10px;
 }
 
-.cart-total {
-    background: white;
-    border-radius: 10px;
-    padding: 20px;
-    margin-top: 20px;
-}
 
-.total-line {
+button{
     display: flex;
-    justify-content: space-between;
-    margin-bottom: 10px;
-    padding-bottom: 10px;
-    border-bottom: 1px solid #eee;
-}
-
-.total-final {
-    font-size: 1.5em;
-    font-weight: bold;
-    color: #333;
-    margin-top: 10px;
-}
-
-.btn-checkout {
-    width: 100%;
-    padding: 15px;
-    background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
-    color: white;
-    border: none;
-    border-radius: 8px;
-    font-size: 1.1em;
-    font-weight: 600;
-    cursor: pointer;
-    margin-top: 20px;
-    transition: all 0.3s ease;
-}
-
-.btn-checkout:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(40, 167, 69, 0.4);
-}
-
-.btn-checkout:disabled {
-    background: #6c757d;
-    cursor: not-allowed;
-    transform: none;
-    box-shadow: none;
+    justify-content: center;
+    align-items: center;
 }

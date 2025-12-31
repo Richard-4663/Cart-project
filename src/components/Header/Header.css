@@ -1,7 +1,13 @@
-header{
+.header {
   background: linear-gradient(135deg, var(--corTema) 0%, #764ba2 100%);
   padding: 3em;
   border-start-end-radius: 20px;
   border-start-start-radius: 20px;
   color: white;
+  text-align: center;
+}
+
+.cart-icon {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
 }

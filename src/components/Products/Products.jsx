@@ -2,7 +2,7 @@ import { useNavigate } from 'react-router'
 import Button from '../Button/Button.jsx'
 import './produtos.css'
 
-export default function Products({produtos}){
+export default function Products({produtos, onClick}){
 
     const navigate = useNavigate()
     
@@ -45,7 +45,7 @@ export default function Products({produtos}){
                         <i className="fas fa-box"></i> Estoque: <span className="stock-count">{produto.qntEstoque}</span>
                     </div>
                     <br />
-                    <button className="btn-add">
+                    <button className="btn-add" onClick={() => onClick(produto)}>
                         <i className="fas fa-cart-plus"></i> Adicionar
                     </button>
                 </div>
