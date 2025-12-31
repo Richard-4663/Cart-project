@@ -1,7 +1,22 @@
+import { useNavigate } from 'react-router'
 import Button from '../Button/Button.jsx'
 import './produtos.css'
 
 export default function Products({produtos}){
+
+    const navigate = useNavigate()
+    
+    function seeProduct(produto){
+
+        const query = new URLSearchParams()
+        query.set('nome', produto.nome)
+        query.set('preco', produto.preco)
+        query.set('categoria', produto.categoria)
+        query.set('estoque', produto.qntEstoque)
+
+        navigate(`/product?${query.toString()}`)
+    }
+
     return(
         <div className="products p-4 text-start rounded-3">
             <h2>Produtos disponiveis</h2>
@@ -18,11 +33,11 @@ export default function Products({produtos}){
             <div className="items mt-4">{produtos.map(produto => 
 
                 <div key={produto.id} className="item-card" data-category="eletronicos">
-                    <div className="product-image">
+                    <div role="button" onClick={() => seeProduct(produto)} className="product-image">
                         <i className="fas fa-mobile-alt"></i>
                     </div>
-                    <h3 className="product-name">{produto.nome}</h3>
-                    <div className="product-price">R$ {produto.preco}</div>
+                    <h3 role="button" onClick={() => seeProduct(produto)} className="product-name">{produto.nome}</h3>
+                    <div className="product-price">R$ {produto.preco.toFixed(2)}</div>
                     <div className="product-category">
                         <i className="fas fa-tag"></i> {produto.categoria}
                     </div>
