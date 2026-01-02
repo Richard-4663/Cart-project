@@ -2,7 +2,7 @@ import './Cart.css'
 import SummaryCart from '../SummaryCart/SummaryCart.jsx'
 import { useState } from 'react'
 
-export default function Cart({ itemCart, onClick, increment, decrement }) {
+export default function Cart({ itemsCart, onClick, increment, decrement }) {
   
   return (
     <div className="cart-section p-4 text-start rounded-3">
@@ -10,7 +10,7 @@ export default function Cart({ itemCart, onClick, increment, decrement }) {
       <hr />
 
       <div className="cart-items">
-        {itemCart.map(item => (
+        {itemsCart.map(item => (
           <div key={item.id} className="cart-item">
             <div className="cart-item-info">
               <div className="cart-item-name">
@@ -41,7 +41,7 @@ export default function Cart({ itemCart, onClick, increment, decrement }) {
         ))}
       </div>
 
-      <SummaryCart />
+      <SummaryCart productsCart={itemsCart} />
 
     </div>
   )

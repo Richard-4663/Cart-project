@@ -65,7 +65,7 @@ function App() {
           const newQuantity = item.quantidadeCarrinho - 1;
           if (newQuantity <= 0) {
             // Remove o item se chegar a 0
-            return null;
+            return 0;
           }
           return { ...item, quantidadeCarrinho: newQuantity };
         }
@@ -81,7 +81,7 @@ function App() {
         <Header />  
         <div className='content bg-light'>
           <Products produtos={produtos} onClick={AddItemCart}/>
-          <Cart itemCart={produtosCarrinho} onClick={removeItemCart} increment={incrementQuantity} decrement={decrementQuantity} />
+          <Cart itemsCart={produtosCarrinho} onClick={removeItemCart} increment={incrementQuantity} decrement={decrementQuantity} />
         </div>
       </div>
         
