@@ -8,14 +8,15 @@ export default function ProductPage(){
     const priceProduct = searchParams.get("preco") 
     const categoryProduct = searchParams.get("categoria") 
     const quantityProduct = searchParams.get("estoque") 
+    const imgProduct = searchParams.get("imagem") 
 
     return(
         <div className="wrapper d-flex justify-content-center align-items-center min-vh-100 min-vw-100">
             <div className="bg-light p-4 rounded-2 w-75 h-50">
                 <h1 className='p-4'>Detalhes do produto</h1>
                 <div className="details products p-5">
-                    <div className="product-image h-100">
-                        <i className="fas fa-mobile-alt"></i>
+                    <div className="h-100">
+                        <img src={imgProduct} alt="" className='w-100' />
                     </div>
                     <div>
     

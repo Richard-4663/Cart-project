@@ -2,29 +2,27 @@ import './SummaryCart.css'
 
 export default function SummaryCart({productsCart}){
   
-// 1️⃣ Função
 const calcularDiscont = (subtotal) => {
   if (subtotal < 100) return 0
   if (subtotal <= 300) return 10
   return 30
 }
 
-// 2️⃣ Subtotal
 const subtotal = productsCart?.reduce(
   (acc, produto) => acc + produto.preco,
   0
 ) || 0
 
-// 3️⃣ Percentual de desconto
+// Percentual de desconto
 const discont = calcularDiscont(subtotal)
 
-// 4️⃣ Valor do desconto (NÚMERO)
+//  Valor do desconto (NÚMERO)
 const valorDesconto = subtotal * (discont / 100)
 
-// 5️⃣ Total final
+//  Total final
 const total = subtotal - valorDesconto
 
-// 6️⃣ Formatação
+//  Formatação
 const totalFormatado = total.toLocaleString('pt-BR', {
   style: 'currency',
   currency: 'BRL'

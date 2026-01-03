@@ -13,13 +13,16 @@ export default function Products({produtos, onClick}){
         query.set('preco', produto.preco)
         query.set('categoria', produto.categoria)
         query.set('estoque', produto.qntEstoque)
+        query.set('imagem', produto.imagem)
 
         navigate(`/product?${query.toString()}`)
     }
 
     return(
         <div className="products p-4 text-start rounded-3">
-            <h2>Produtos disponiveis</h2>
+            <div className='d-flex'>
+            <i class="fa-solid fa-boxes-stacked mt-3 me-2"></i><h2>Produtos disponiveis</h2>
+            </div>
             <hr className="bg-purple"/>
             <div className="Btns d-flex gap-4 flex-wrap">
                 <Button text={'Todos'} />
@@ -34,9 +37,9 @@ export default function Products({produtos, onClick}){
 
                 <div key={produto.id} className="item-card" data-category="eletronicos">
                     <div role="button" onClick={() => seeProduct(produto)} className="product-image">
-                        <i className="fas fa-mobile-alt"></i>
+                        <img src={produto.imagem} width={200} height={180}  alt="" />
                     </div>
-                    <h3 role="button" onClick={() => seeProduct(produto)} className="product-name">{produto.nome}</h3>
+                    <p role="button" onClick={() => seeProduct(produto)} className="product-name">{produto.nome}</p>
                     <div className="product-price">R$ {produto.preco.toFixed(2)}</div>
                     <div className="product-category">
                         <i className="fas fa-tag"></i> {produto.categoria}

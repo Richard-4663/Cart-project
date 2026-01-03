@@ -1,6 +1,5 @@
 import './Cart.css'
 import SummaryCart from '../SummaryCart/SummaryCart.jsx'
-import { useState } from 'react'
 
 export default function Cart({ itemsCart, onClick, increment, decrement }) {
   
