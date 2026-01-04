@@ -79,7 +79,7 @@ function App() {
   return (
     <div className='cont-back'>
     <Header /> 
-    <Carrossel img1={'../public/assets/imgCarrosel/img1.png'} img2={'../public/assets/imgCarrosel/img2.png'} img3={'../public/assets/imgCarrosel/img3.png'}/>
+    <Carrossel img1={'../public/assets/imgCarrosel/img1.png'} img2={'../public/assets/imgCarrosel/img2.png'} img3={'../public/assets/imgCarrosel/img3.png'} img4={'../public/assets/imgCarrosel/img4.png'}/>
       <div className="wrapper"> 
         <div className='app-container'>
           <div className='content bg-light'>

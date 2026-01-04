@@ -21,7 +21,7 @@ export default function Products({produtos, onClick}){
     return(
         <div className="products p-4 text-start rounded-3">
             <div className='d-flex'>
-            <i class="fa-solid fa-boxes-stacked mt-3 me-2"></i><h2>Produtos disponiveis</h2>
+            <i className="fa-solid fa-boxes-stacked mt-3 me-2"></i><h2>Produtos disponiveis</h2>
             </div>
             <hr className="bg-purple"/>
             <div className="Btns d-flex gap-4 flex-wrap">

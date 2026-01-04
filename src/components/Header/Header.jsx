@@ -1,6 +1,5 @@
 import { useNavigate } from 'react-router'
 import './Header.css'
-import Login from '../../pages/Login/Login.jsx'
 
 export default function Header() {
 
@@ -12,22 +11,19 @@ export default function Header() {
   const handleLoginClick = () => {
     navigate('/login')
   }
-  const handleRegisterClick = () => {
-    navigate('/cadastro')
-  }
 
   return (
     <header className="header" >
-      <nav className="navbar" style={{height: 50}}>
-        <div className="d-flex w-100 justify-content-center">
-          <img src="/public/assets/Logo/logo1.png" alt="Bootstrap" width="150" height="50" className='' onClick={handleLogoClick}/>
+      <nav className="navbar" style={{height: 30}}>
+        {/* fazer um flex-wrap na div debaixo para quebrar o navbar para responsividade */}
+        <div className="d-flex w-100 justify-content-center" style={{height: 40}}>
+          <img src="/public/assets/Logo/logo1.png" role='button' width="150" height="50" onClick={handleLogoClick}/>
           <form className="d-flex w-50 ms-5" role="search">
             <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
-            <button className="btn btn-add w-25 " type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+            <button className="btn-nav w-25 " type="submit"><i className="fa-solid fa-magnifying-glass"></i></button>
           </form>
           <div className="d-flex align-items-center ms-5">
-            <button className="btn btn-add me-3" style={{width: 150}} onClick={handleLoginClick}><i class="fa-solid fa-user"></i>Entrar</button>
-            <button className="btn btn-add me-3 d-flex" style={{width: 150}} onClick={handleRegisterClick}><i class="fa-solid fa-user" ></i>Criar conta</button>  
+            <button className="btn-nav me-3" style={{width: 200}} onClick={handleLoginClick}><i className="fa-solid fa-user"></i>Entrar/Cadastre-se</button>
           </div>
         </div>
       </nav>
