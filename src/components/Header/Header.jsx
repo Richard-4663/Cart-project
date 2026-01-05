@@ -25,7 +25,7 @@ export default function Header() {
     <header className="header">
       <nav className="navbar" >
         <div className="d-flex w-100 justify-content-center align-items-center flex-wrap" >
-          <img id='logo' src="/public/assets/Logo/logo1.png" role='button' width="150" height="50" onClick={handleLogoClick}/>
+          <img id='logo' src="/assets/Logo/logo1.png" role='button' width="150" height="50" onClick={handleLogoClick}/>
           <form className="d-flex m-2 w-50" role="search" onSubmit={FormEvent} >
             <input className="form-control me-2" type="search" placeholder="Pesquisar" aria-label="Search"/>
             <button className="btn-nav w-25 " type="submit"><i className="fa-solid fa-magnifying-glass"></i></button>

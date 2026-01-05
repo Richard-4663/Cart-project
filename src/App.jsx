@@ -13,6 +13,9 @@ import Carrossel from './components/Carrossel/Carrossel.jsx'
 import {produtos} from './data/products.js'
 import useCart from './hooks/useCart.js'
 
+// //importando imagens
+// import 
+
 
 function App() {
 
@@ -21,7 +24,7 @@ function App() {
   return (
     <>
     <Header /> 
-    <Carrossel img1={'../public/assets/imgCarrosel/img1.png'} img2={'../public/assets/imgCarrosel/img2.png'} img3={'../public/assets/imgCarrosel/img3.png'} img4={'../public/assets/imgCarrosel/img4.png'}/>
+    <Carrossel img1={'/assets/imgCarrosel/img1.png'} img2={'/assets/imgCarrosel/img2.png'} img3={'/assets/imgCarrosel/img3.png'} img4={'/assets/imgCarrosel/img4.png'}/>
       <div className="wrapper"> 
         <div className='app-container'>
           <div className='content bg-light'>
