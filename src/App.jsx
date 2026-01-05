@@ -23,7 +23,7 @@ function App() {
   
   return (
     <>
-    <Header /> 
+    <Header />  
     <Carrossel img1={'/assets/imgCarrosel/img1.png'} img2={'/assets/imgCarrosel/img2.png'} img3={'/assets/imgCarrosel/img3.png'} img4={'/assets/imgCarrosel/img4.png'}/>
       <div className="wrapper"> 
           <div className='content bg-light'>

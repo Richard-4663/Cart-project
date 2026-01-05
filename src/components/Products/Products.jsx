@@ -40,11 +40,13 @@ export default function Products({produtos, onClick}){
                 <Button categoriaAtual={categoriaAtual} onclick={() => setCategoriaAtual('emEstoque')} text={'Em estoque'}/>
             </div>
 
-            <div className="items mt-4">{produtosFiltrados.map(produto => 
+            <div className="items mt-4">
+                
+                {produtosFiltrados.map(produto => 
 
                 <div key={produto.id} className="item-card" data-category="eletronicos">
                     <div role="button" onClick={() => seeProduct(produto)} className="product-image">
-                        <img src={produto.imagem} width={200} height={180}  alt="" />
+                        <img className='product-image' src={produto.imagem} width={200} height={180}  alt="" />
                     </div>
                     <p role="button" onClick={() => seeProduct(produto)} className="product-name">{produto.nome}</p>
                     <div className="product-price">R$ {produto.preco.toFixed(2)}</div>
