@@ -26,12 +26,10 @@ function App() {
     <Header /> 
     <Carrossel img1={'/assets/imgCarrosel/img1.png'} img2={'/assets/imgCarrosel/img2.png'} img3={'/assets/imgCarrosel/img3.png'} img4={'/assets/imgCarrosel/img4.png'}/>
       <div className="wrapper"> 
-        <div className='app-container'>
           <div className='content bg-light'>
             <Products produtos={produtos} onClick={cartFunctions.AddItemCart}/>
             <Cart itemsCart={cartFunctions.produtosCarrinho} onClick={cartFunctions.removeItemCart} increment={cartFunctions.incrementQuantity} decrement={cartFunctions.decrementQuantity} />
           </div>
-        </div>
       </div>
     </>
     

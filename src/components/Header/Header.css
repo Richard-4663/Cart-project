@@ -37,6 +37,9 @@
   .btn-bars{
     display: block !important;
   }
+  .form-content{
+    width: 100% !important;
+  }
 }
 
 .item-list{

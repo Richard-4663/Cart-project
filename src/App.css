@@ -17,17 +17,19 @@
 
 
 .content{
+  min-width: 300px;
+  width: 90%;
   position: relative;
   border-radius: 20px;
   display: grid;
   padding: 30px;
   grid-template-columns: 2fr 1fr;
   gap: 30px;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.5);
 }
 
 .app-container{
   width: 90%;
-  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.5);
   margin: 0;
   padding: 0;
   border-start-end-radius: 20px;
