@@ -10,3 +10,8 @@ button:hover{
     background-color: var(--colorPurple);
     color: white;
 }
+
+.active{
+    background-color: var(--colorPurple);
+    color: white;
+}

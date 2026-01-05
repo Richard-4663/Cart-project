@@ -1,8 +1,15 @@
 import { useNavigate } from 'react-router'
 import Button from '../Button/Button.jsx'
 import './produtos.css'
+import { useState } from 'react'
+
+import useCart from '../../hooks/useCart.js'
 
 export default function Products({produtos, onClick}){
+
+    const cartFunctions = useCart();
+    const [categoriaAtual, setCategoriaAtual] = useState('todos');
+     const produtosFiltrados = cartFunctions.filtro(produtos, categoriaAtual);
 
     const navigate = useNavigate()
     
@@ -25,15 +32,15 @@ export default function Products({produtos, onClick}){
             </div>
             <hr className="bg-purple"/>
             <div className="Btns d-flex gap-4 flex-wrap">
-                <Button text={'Todos'} />
-                <Button text={'Eletronicos'}/>
-                <Button text={'Roupas'}/>
-                <Button text={'Calçados'}/>
-                <Button text={'Livros'}/>
-                <Button text={'Em estoque'}/>
+                <Button categoriaAtual={categoriaAtual} onclick={() => setCategoriaAtual('todos')} text={'Todos'} />
+                <Button categoriaAtual={categoriaAtual} onclick={() => setCategoriaAtual('eletronicos')} text={'Eletronicos'}/>
+                <Button categoriaAtual={categoriaAtual} onclick={() => setCategoriaAtual('roupas')} text={'Roupas'}/>
+                <Button categoriaAtual={categoriaAtual} onclick={() => setCategoriaAtual('calcados')} text={'Calçados'}/>
+                <Button categoriaAtual={categoriaAtual} onclick={() => setCategoriaAtual('livros')} text={'Livros'}/>
+                <Button categoriaAtual={categoriaAtual} onclick={() => setCategoriaAtual('emEstoque')} text={'Em estoque'}/>
             </div>
 
-            <div className="items mt-4">{produtos.map(produto => 
+            <div className="items mt-4">{produtosFiltrados.map(produto => 
 
                 <div key={produto.id} className="item-card" data-category="eletronicos">
                     <div role="button" onClick={() => seeProduct(produto)} className="product-image">
