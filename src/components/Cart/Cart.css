@@ -1,5 +1,5 @@
 .cart-section{
-    background-color: rgb(233, 232, 232);
+    background-color: var(--colorSecondary);
 }
 
 .cart-items {
@@ -28,7 +28,7 @@
 }
 
 .cart-item-price {
-    color: #667eea;
+    color: var(--colorPurple);
     font-weight: bold;
 }
 
@@ -43,7 +43,7 @@
     height: 30px;
     border-radius: 50%;
     border: none;
-    background: #667eea;
+    background: var(--colorPurple);
     color: white;
     cursor: pointer;
     font-weight: bold;

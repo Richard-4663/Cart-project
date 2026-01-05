@@ -1,5 +1,5 @@
 .products{
-  background-color: rgb(233, 232, 232);
+  background-color: var(--colorSecondary);
   width: 99%;
 }
 
@@ -30,12 +30,8 @@
     box-shadow: 0 6px 12px rgba(0,0,0,0.15);
 }
 
-.item-card:hover .product-image {
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-}
-
 .item-card:hover .product-name {
-    color: var(--corTema);
+    color: dodgerblue;
 }
 
 .product-image {

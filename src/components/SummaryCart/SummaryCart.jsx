@@ -62,7 +62,7 @@ const discontFormated = valorDesconto.toLocaleString('pt-BR', {
           <span id="total">{totalFormatado}</span>
         </div>
 
-        <button className="btn-checkout">Finalizar Compra ({productsCart.length} Itens)</button>
+        <button className="btn-add p-3 fs-4">Finalizar Compra ({productsCart.length} Itens)</button>
       </div>
     )
 }
