@@ -26,7 +26,7 @@ export default function Products({produtos, onClick}){
     }
 
     return(
-        <div className="products p-4 text-start rounded-3">
+        <div className="products p-3 p-md-4 text-start rounded-3">
             <div className='d-flex'>
             <i className="fa-solid fa-boxes-stacked mt-3 me-2"></i><h2>Produtos disponiveis</h2>
             </div>
@@ -41,28 +41,29 @@ export default function Products({produtos, onClick}){
             </div>
 
             <div className="items mt-4">
-                
                 {produtosFiltrados.map(produto => 
-
                 <div key={produto.id} className="item-card" data-category="eletronicos">
                     <div role="button" onClick={() => seeProduct(produto)} className="product-image">
-                        <img className='product-image' src={produto.imagem} width={200} height={180}  alt="" />
+                        <img className='product-image' src={produto.imagem} width={200} height={180} alt="" />
                     </div>
                     <p role="button" onClick={() => seeProduct(produto)} className="product-name">{produto.nome}</p>
+
                     <div className="product-price">R$ {produto.preco.toFixed(2)}</div>
-                    <div className="product-category">
-                        <i className="fas fa-tag"></i> {produto.categoria}
+
+                    <div className="product-info-secondary">
+                        <div className="product-category">
+                            <i className="fas fa-tag"></i> {produto.categoria}
+                        </div>
+                        <div className="product-stock">
+                            <i className="fas fa-box"></i> Estoque: <span className="stock-count">{produto.qntEstoque}</span>
+                        </div>
                     </div>
-                    <div className="product-stock">
-                        <i className="fas fa-box"></i> Estoque: <span className="stock-count">{produto.qntEstoque}</span>
-                    </div>
-                    <br />
+
                     <button className="btn-add" onClick={() => onClick(produto)}>
                         <i className="fas fa-cart-plus"></i> Adicionar
                     </button>
                 </div>
             )}
-
             </div>
         </div>
         
