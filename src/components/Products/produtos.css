@@ -139,6 +139,12 @@
 
 /* ===== MOBILE (2 COLUNAS - ESTILO SHOPEE) ===== */
 @media (max-width: 768px) {
+
+    .product-category,
+    .product-stock, .btn-add {
+        display: none;
+    }
+
     .products {
         padding: 0.8rem;
     }
@@ -150,8 +156,7 @@
     
     .item-card {
         min-height: auto;
-        height: auto;
-        aspect-ratio: 1 / 1.3;
+        min-height: 150px;
         padding: 10px;
         display: flex;
         flex-direction: column;
@@ -174,6 +179,8 @@
     
     .product-price {
         font-size: 1.1rem;
+        position: relative;
+        top: -10px;
         margin-bottom: 6px;
     }
     
@@ -199,6 +206,12 @@
 
 /* ===== TELAS MUITO PEQUENAS ===== */
 @media (max-width: 360px) {
+
+    .content{
+        width: 100%;
+        padding: 10PX;
+    }
+
     .items {
         gap: 6px;
     }
