@@ -16,10 +16,10 @@ export default function Header() {
             <button className="btn-nav w-25 " type="submit"><i className="fa-solid fa-magnifying-glass"></i></button>
             <button className="btn-nav w-25 ms-1 btn-bars d-none" onClick={headerFunctions.handlePlusClick} ><i className="fa-solid fa-bars"></i></button>
           </form>
-          <div className={`options w-75 ${headerFunctions.optionsOpen ? 'd-block' : 'd-none'}`}>
+          <div className={`options w-100 ${headerFunctions.optionsOpen ? 'd-block' : 'd-none'}`}>
             <ul className='list-unstyled'>
               <li className='item-list'><h3>Bem vindo</h3><p className='fs-6'>Entra na sua conta para ver suas compras, favoritos etc.</p><button className='btn btn-nav btn-entrar' onClick={headerFunctions.handleLoginClick}>Entrar/Cadastrar</button></li>
-              <li className='item-list'><i className="fa-solid fa-house me-2"></i>Início</li>
+              <li className='item-list bg-secondary bg-opacity-50' ><i className="fa-solid fa-house me-2"></i>Início</li>
               <li className='item-list'><i className="fa-solid fa-clock-rotate-left me-2"></i>Histórico</li>
               <li className='item-list'><i className="fa-solid fa-address-book me-2"></i>Contato</li>
               <li className='item-list'><i className="fa-solid fa-tag me-2"></i>Ofertas</li>
