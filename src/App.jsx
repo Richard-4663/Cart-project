@@ -4,33 +4,30 @@ import 'bootstrap/dist/js/bootstrap.bundle.min'
 import './App.css'
 
 // importando componentes
-import Header from './components/Header/Header.jsx'
-import Products from './components/Products/Products.jsx'
-import Cart from './components/Cart/Cart.jsx'
-import Carrossel from './components/Carrossel/Carrossel.jsx'
+import Header from './components/ComponentsHome/Header/Header.jsx'
+import Products from './components/ComponentsHome/Products/Products.jsx'
+import Carrossel from './components/ComponentsHome/Carrossel/Carrossel.jsx'
+import Footer from './components/ComponentsHome/Footer/Footer.jsx'
+import Category from './components/ComponentsHome/Category/Category.jsx'
 
 // importando dados e funções
 import {produtos} from './data/products.js'
-import useCart from './hooks/useCart.js'
-
-// //importando imagens
-// import 
+// import useCart from './hooks/useCart.js'
 
 
 function App() {
 
-  const cartFunctions = useCart();
+  // const cartFunctions = useCart();
   
   return (
     <>
     <Header />  
-    <Carrossel img1={'/assets/imgCarrosel/img1.png'} img2={'/assets/imgCarrosel/img2.png'} img3={'/assets/imgCarrosel/img3.png'} img4={'/assets/imgCarrosel/img4.png'}/>
-      <div className="wrapper"> 
-          <div className='content bg-light'>
-            <Products produtos={produtos} onClick={cartFunctions.AddItemCart}/>
-            <Cart itemsCart={cartFunctions.produtosCarrinho} onClick={cartFunctions.removeItemCart} increment={cartFunctions.incrementQuantity} decrement={cartFunctions.decrementQuantity} />
-          </div>
-      </div>
+    <Carrossel img1={'/assets/imgCarrosel/img1.png'} img2={'/assets/imgCarrosel/img2.png'} img3={'/assets/imgCarrosel/img3.png'} img4={'/assets/imgCarrosel/img4.png'} img5={'/assets/imgCarrosel/img5.png'} img6={'/assets/imgCarrosel/img6.png'} img7={'/assets/imgCarrosel/img7.png'}/>
+    <div className="wrapper"> 
+      <Products produtos={produtos}/>
+      <Category />
+    </div>
+      <Footer />
     </>
     
   )

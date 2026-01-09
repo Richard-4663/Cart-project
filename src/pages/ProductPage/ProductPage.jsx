@@ -1,41 +1,36 @@
+//importando dependencias
 import { useSearchParams } from 'react-router';
+
+//importando dados
+import {produtos} from '../../data/products.js'
+
+// impotando estilos
 import './ProductPage.css'
+
+//importando Componentes
+import Header from '../../components/ComponentsHome/Header/Header.jsx'
+import PriceSection from '../../components/ComponentsPageProducts/PriceSection/PriceSection.jsx';
+import ImgProductSection from '../../components/ComponentsPageProducts/ImgProductSection/ImgProductSection.jsx';
+import DescriptionProductSection from '../../components/ComponentsPageProducts/DescriptionProductSection/DescriptionProductSection.jsx';
 
 export default function ProductPage(){
 
     const [searchParams] = useSearchParams();
-    const nameProduct = searchParams.get("nome") 
-    const priceProduct = searchParams.get("preco") 
-    const categoryProduct = searchParams.get("categoria") 
-    const quantityProduct = searchParams.get("estoque") 
-    const imgProduct = searchParams.get("imagem") 
+    const id = searchParams.get("id")
+    const produto = produtos.find(produto => produto.id == id) 
 
     return(
-        <div className="wrapper d-flex justify-content-center align-items-center min-vh-100 min-vw-100">
-            <div className="bg-light p-4 rounded-2 w-75 h-50 ">
-                <h1 className='p-4'>Detalhes do produto</h1>
-                <div className="details products p-5 bg-body-secondary">
-                    <div className="h-100">
-                        <img src={imgProduct} alt="" className='w-100' />
-                    </div>
-                    <div>
-    
-                        <h2 className="">{nameProduct}</h2>
-                        <div className="product-price fs-1">R$ {Number(priceProduct).toFixed(2)}</div>
-                        <div className="product-category fs-5">
-                            <i className="fas fa-tag"></i>Categoria: {categoryProduct}
-                        </div>
-                        <div className="product-stock">
-                            <i className="fas fa-box"></i> Estoque: <span className="stock-count">{quantityProduct}</span>
-                        </div>
-                        <br />
-                        <button className="btn-add">
-                            <i className="fas fa-cart-plus"></i> Adicionar
-                        </button>
+      <>
+        <Header />
+          <div className="d-flex justify-content-center align-items-center mt-4">
+                <div className="details p-5 bg-light w-75 rounded-3">
+                  
+                  <ImgProductSection produto={produto} />
+                  <DescriptionProductSection produto={produto}/>
+                  <PriceSection produto={produto} />
 
-                    </div>
                 </div>
-            </div>
         </div>
+      </>
     )
 }

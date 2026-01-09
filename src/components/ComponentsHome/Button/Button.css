@@ -1,0 +1,17 @@
+button{
+    padding: 5px 15px;
+    border-radius: 6px;
+    color: black;
+    border: none;
+    transition: 0.3s;
+}
+
+button:hover{
+    background-color: var(--colorPurple);
+    color: white;
+}
+
+.active{
+    background-color: var(--colorPurple);
+    color: white;
+}

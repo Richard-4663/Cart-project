@@ -1,52 +1,28 @@
 :root{
   --colorTheme: #0F4C5C;
   --colorSecondary: #1a90ad;
+  --colorBackground:#0b3b47;
   --colorWhite: #ffffff;
   --colorPurple: #7f5ad4;
-  --colorGrey: #e6e6e6;
+  --colorGrey: #ebebeb;
+}
+
+#root, body, html{
+  background-color: var(--colorBackground);
+  height: 100%;
+  margin: 0;
 }
 
 .wrapper{
   width: 100%;
-  min-height: 100vh;
-  background-color: var(--colorTheme);
-  display: flex;
   justify-content: center;
-  padding: 1rem;
+  padding: 0.5rem;
+  display: flex;
+  flex-wrap: wrap;
 }
-
-
-.content{
-  min-width: 300px;
-  width: 98%;
-  position: relative;
-  border-radius: 20px;
-  display: grid;
-  padding: 30px;
-  grid-template-columns: 2fr 1fr;
-  gap: 30px;
-  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.5);
-}
-
-.app-container{
-  width: 90%;
-  margin: 0;
-  padding: 0;
-  border-start-end-radius: 20px;
-  border-start-start-radius: 20px;
-}
-
-.content{
-  display: grid;
-  grid-template-columns: 2fr 1fr;
-  gap: 30px;
-  padding: 30px;
-} 
-
 /* Tablet */
 @media (max-width: 1135px) {
-  .content{
+  .wrapper{
     grid-template-columns: 1fr;
   }
 }
-

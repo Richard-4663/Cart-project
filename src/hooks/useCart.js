@@ -63,9 +63,6 @@ export default function useCart(){
     };
 
     
-    
-
-
     return {
     produtosCarrinho,
     AddItemCart,
