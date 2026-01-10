@@ -3,6 +3,7 @@
   max-width: 450px;
   overflow: hidden;
   border-radius: 8px;
+  min-width: 0;
 }
 
 .carousel-track {
@@ -21,6 +22,7 @@
   margin-top: 10px;
   gap: 12px;
   justify-content: center;
+  flex-wrap: wrap;
 }
 
 .miniatura {
@@ -30,7 +32,6 @@
   border-radius: 6px;
   cursor: pointer;
   border: 1px solid transparent;
-  transition: border 0.2s ease;
 }
 
 .miniatura:hover {

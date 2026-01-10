@@ -9,7 +9,7 @@ export default function ImgProductSection({produto}){
     }
 
     return(
-        <div>
+        <div className=" d-flex justify-content-center flex-wrap">
             <div className="carousel-container border">
                 <div className="carousel-track" style={{ transform: `translateX(-${imgAtual * 100}%)`}}>
                 {produto.imagem.map((img, index) => (
@@ -18,11 +18,11 @@ export default function ImgProductSection({produto}){
                 </div>
             </div>
 
-            <div className='miniaturas d-flex gap-3'>
-                <div ><img className='miniatura' role='button' onClick={() => showImg(0)} src={produto.imagem[0]} alt="" /></div>
-                <div ><img className='miniatura' role='button' onClick={() => showImg(1)} src={produto.imagem[1]} alt="" /></div>
-                <div ><img className='miniatura' role='button' onClick={() => showImg(2)} src={produto.imagem[2]} alt="" /></div>
-                <div ><img className='miniatura' role='button' onClick={() => showImg(3)} src={produto.imagem[3]} alt="" /></div>
+            <div className='miniaturas gap-3'>
+                <div><img className='miniatura' role='button' onClick={() => showImg(0)} src={produto.imagem[0]} alt="" /></div>
+                <div><img className='miniatura' role='button' onClick={() => showImg(1)} src={produto.imagem[1]} alt="" /></div>
+                <div><img className='miniatura' role='button' onClick={() => showImg(2)} src={produto.imagem[2]} alt="" /></div>
+                <div><img className='miniatura' role='button' onClick={() => showImg(3)} src={produto.imagem[3]} alt="" /></div>
             </div>
 
         </div>

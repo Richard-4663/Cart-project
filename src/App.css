@@ -20,6 +20,7 @@
   display: flex;
   flex-wrap: wrap;
 }
+
 /* Tablet */
 @media (max-width: 1135px) {
   .wrapper{
