@@ -21,3 +21,18 @@
 .setas-carousel{
   color: black;
 }
+
+@media (max-width: 1024px) {
+  .div-content{
+  position: relative;
+  left: 50%;
+  transform: translate(-50%, 0);
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-content: center;
+  width: 100%;
+  gap: 2em;
+  margin-top: 1em;
+}
+
+}

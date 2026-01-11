@@ -15,10 +15,10 @@ export default function Header() {
 
           <img id='logo' src="/assets/Logo/logo1.png" role='button' width="150" height="50" onClick={headerFunctions.handleLogoClick}/>
 
-          <form className={`form-content d-flex m-2 w-50 ${largura < 798 && 'w-100'}`} role="search" onSubmit={headerFunctions.FormEvent} >
+          <form className={`form-content d-flex m-2 w-50 ${largura < 1140 && 'w-100'}`} role="search" onSubmit={headerFunctions.FormEvent} >
             <input className="form-control me-2" type="search" placeholder="Pesquisar" aria-label="Search"/>
             <button className="btn-nav w-25 " type="submit"><i className="fa-solid fa-magnifying-glass"></i></button>
-            <button className="btn-nav w-25 ms-1 btn-bars d-none" onClick={headerFunctions.handlePlusClick} ><i className="fa-solid fa-bars"></i></button>
+            <button className={`btn-nav w-25 ms-1 btn-bars ${largura < 1140 ? 'd-block': 'd-none'}`} onClick={headerFunctions.handlePlusClick} ><i className="fa-solid fa-bars"></i></button>
           </form>
 
           <div className={`options w-100 ${headerFunctions.optionsOpen ? 'd-block' : 'd-none'}`}>

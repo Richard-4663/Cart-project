@@ -1,6 +1,10 @@
 import './Carrossel.css'
+import useWindowWidth from '../../../hooks/useWindowWidth.js'
 
 export default function Carrossel({img1, img2, img3, img4, img5, img6, img7}){
+
+    const largura = useWindowWidth();
+
     return(
       <div className='div-content'>
         <div className="carousel-wrapper">
@@ -37,7 +41,8 @@ export default function Carrossel({img1, img2, img3, img4, img5, img6, img7}){
         </div>
 
 
-        <div className="carousel-wrapper2">
+        {largura > 1024 && (
+          <div className="carousel-wrapper2">
           <div id="carouselExampleIndicators2" className="carousel slide" data-bs-ride="carousel" data-bs-interval="3000" data-bs-pause="false">
             <div className="carousel-indicators">
               <button type="button" data-bs-target="#carouselExampleIndicators2" data-bs-slide-to="0" className="active" aria-current="true" aria-label="Slide 1"></button>
@@ -65,6 +70,7 @@ export default function Carrossel({img1, img2, img3, img4, img5, img6, img7}){
             </button>
           </div>
         </div>
+        )}
 
       </div>
     )

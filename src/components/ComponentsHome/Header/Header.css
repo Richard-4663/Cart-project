@@ -27,15 +27,12 @@
 }
 
 
-@media (max-width: 974px) {
+@media (max-width: 1140px) {
   #logo, .btn-login{
     display: none;
   }
   .search{
     width: 100%;
-  }
-  .btn-bars{
-    display: block !important;
   }
   .form-content{
     width: 100% !important;
