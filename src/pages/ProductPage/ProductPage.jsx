@@ -1,5 +1,6 @@
 //importando dependencias
 import { useSearchParams } from 'react-router';
+import { useEffect } from 'react';
 
 //importando dados
 import {produtos} from '../../data/products.js'
@@ -23,8 +24,13 @@ export default function ProductPage(){
     const [searchParams] = useSearchParams();
     const id = searchParams.get("id")
     const produto = produtos.find(produto => produto.id == id) 
+    useEffect(() => {
+        // Rolagem para o topo ao montar o componente
+        window.scrollTo(0, 0);
+    }, [])
 
     return(
+      
       <>
         <Header />
           <div className="d-flex justify-content-center align-items-center mt-4">
