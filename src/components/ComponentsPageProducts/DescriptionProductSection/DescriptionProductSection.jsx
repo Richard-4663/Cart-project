@@ -11,7 +11,7 @@ export default function DescriptionProductSection({produto}){
             <div>
                 <h4>{produto.nome}</h4>
                 {largura <= 668 && (
-                    <h1 className="product-price fs-1">R$ {produto.nome}</h1>
+                    <h1 className="product-price fs-1">R$ {produto.preco}</h1>
                 )}
 
             {produto.categoria === "roupas" && (
