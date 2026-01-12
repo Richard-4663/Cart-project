@@ -2,16 +2,16 @@
   background-color: var(--colorSecondary);
 }
 
-.btn-add {
+.btn-buy {
   max-width: 100%;
   padding: 10px;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: var(--colorPurple);
   color: white;
   border: none;
   border-radius: 8px;
   cursor: pointer;
   font-weight: 600;
-  font-size: 0.9rem;
+  font-size: 1.1em;
   transition: all 0.2s ease;
   display: flex;
   align-items: center;
@@ -20,6 +20,21 @@
   box-sizing: border-box;
 }
 
-.btn-add:hover {
-    opacity: 0.9;
+.btn-buy:hover {
+  opacity: 0.9;
+  background-color: rgb(47, 0, 68);
+}
+
+.btn-add{
+  background-color: white;
+  font-size: 1.3em;
+}
+
+.btn-add:hover{
+  background-color: rgb(83, 77, 158);
+  font-size: 1.3em;
+}
+
+.frete{
+  height: 40px;
 }

@@ -14,7 +14,7 @@ export default function Products({produtos}){
     const cartFunctions = useCart();
 
     const [categoriaAtual, setCategoriaAtual] = useState('todos');
-    const [quantidadeVisivel, setQuantidadeVisivel] = useState(18);
+    const [quantidadeVisivel, setQuantidadeVisivel] = useState(6);
     
     const produtosFiltrados = cartFunctions.filtro(produtos, categoriaAtual);
     const produtosLimitados = produtosFiltrados.slice(0, quantidadeVisivel); // Limita aqui
@@ -51,9 +51,13 @@ export default function Products({produtos}){
                         <div onClick={() => seeProduct(produto)} className="product-image">
                             <img className='product-image' src={produto.imagem[0]} width={200} height={180} alt="" />
                         </div>
+
                         <p onClick={() => seeProduct(produto)} className="product-name">{produto.nome}</p>
 
                         <div className="product-price">R$ {produto.preco.toFixed(2)}</div>
+                        <div className='d-flex flex-wrap align-items-center'>
+                            <i className="fa-solid fa-boxes-stacked me-2"></i><h6 className={`stock-count ${produto.qntEstoque > 0 ? 'text-success': 'text-danger'}`}>{produto.qntEstoque > 0 ? 'Em estoque' : 'Produto indisponível'}</h6>
+                        </div>
                     </div>
                 )}
 

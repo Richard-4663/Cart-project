@@ -24,9 +24,11 @@ export default function ProductPage(){
     const [searchParams] = useSearchParams();
     const id = searchParams.get("id")
     const produto = produtos.find(produto => produto.id == id) 
+
     useEffect(() => {
         // Rolagem para o topo ao montar o componente
-        window.scrollTo(0, 0);
+        window.scrollTo(0, 0);  
+
     }, [])
 
     return(
@@ -41,7 +43,7 @@ export default function ProductPage(){
                   <PriceSection produto={produto} />
 
                 </div>
-        </div>
+          </div>
         <Footer />
       </>
     )

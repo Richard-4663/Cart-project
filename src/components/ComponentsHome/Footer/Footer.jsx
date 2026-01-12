@@ -9,7 +9,7 @@ export default function Footer() {
                     <div className="row">
                         <div className="col-md-3 col-6">
                             <div className="service-item">
-                                <i class="fa fa-truck" aria-hidden="true"></i>
+                                <i className="fa fa-truck" aria-hidden="true"></i>
                                 <div>
                                     <h5>Frete Grátis</h5>
                                     <p>Acima de R$ 199,90</p>
@@ -18,7 +18,7 @@ export default function Footer() {
                         </div>
                         <div className="col-md-3 col-6">
                             <div className="service-item">
-                                <i class="fa-solid fa-credit-card"></i>
+                                <i className="fa-solid fa-credit-card"></i>
                                 <div>
                                     <h5>Parcele em até 12x</h5>
                                     <p>Cartões de crédito</p>
@@ -27,7 +27,7 @@ export default function Footer() {
                         </div>
                         <div className="col-md-3 col-6">
                             <div className="service-item">
-                                <i class="fa-solid fa-lock"></i>
+                                <i className="fa-solid fa-lock"></i>
                                 <div>
                                     <h5>Site Seguro</h5>
                                     <p>SSL e criptografia</p>
@@ -36,10 +36,10 @@ export default function Footer() {
                         </div>
                         <div className="col-md-3 col-6">
                             <div className="service-item">
-                                <i class="fa-solid fa-headset"></i>
+                                <i className="fa-solid fa-headset"></i>
                                 <div>
                                     <h5>Suporte 24h</h5>
-                                    <p>WhatsApp: (11) 99999-9999</p>
+                                    <p>WhatsApp: (11) 97701-9749</p>
                                 </div>
                             </div>
                         </div>
@@ -59,11 +59,11 @@ export default function Footer() {
                                 Entrega para todo o Brasil.
                             </p>
                             <div className="social-links">
-                                <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
-                                <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
-                                <a href="#" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
-                                <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
-                                <a href="#" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+                                <a href="#" aria-label="Facebook"><i className="fa-brands fa-facebook"></i></a>
+                                <a href="#" aria-label="Instagram"><i className="fa-brands fa-instagram"></i></a>
+                                <a href="#" aria-label="Twitter"><i className="fa-brands fa-twitter"></i></a>
+                                <a href="#" aria-label="YouTube"><i className="fa-brands fa-youtube"></i></a>
+                                <a href="#" aria-label="WhatsApp"><i className="fa-brands fa-whatsapp"></i></a>
                             </div>
                         </div>
 
