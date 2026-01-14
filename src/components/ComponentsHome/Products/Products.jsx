@@ -32,27 +32,27 @@ export default function Products({produtos}){
 
     return(
             <div className="products md-4 text-start rounded-3">
-                <div className='d-flex align-items-center p-2 ofertas-dia'>
-                    <i className="fa-solid fa-tag me-2"></i><h3>Ofertas do dia</h3>
+                <div className='d-flex align-items-center p-2 mb-3 ofertas-dia'>
+                    <h3>🔥 Ofertas do dia</h3>
                 </div>
 
-                <div className="Btns d-flex gap-4 flex-wrap">
+                {/* <div className="Btns d-flex gap-4 flex-wrap">
                     <Button categoriaAtual={categoriaAtual} onclick={() => setCategoriaAtual('todos')} text={'Todos'} />
                     <Button categoriaAtual={categoriaAtual} onclick={() => setCategoriaAtual('eletronicos')} text={'Eletronicos'}/>
                     <Button categoriaAtual={categoriaAtual} onclick={() => setCategoriaAtual('roupas')} text={'Roupas'}/>
                     <Button categoriaAtual={categoriaAtual} onclick={() => setCategoriaAtual('calcados')} text={'Calçados'}/>
                     <Button categoriaAtual={categoriaAtual} onclick={() => setCategoriaAtual('livros')} text={'Livros'}/>
                     <Button categoriaAtual={categoriaAtual} onclick={() => setCategoriaAtual('emEstoque')} text={'Em estoque'}/>
-                </div>
+                </div> */}
 
                 <div className="items">
                     {produtosLimitados.map(produto => 
-                    <div key={produto.id} className="item-card" data-category="eletronicos">
-                        <div onClick={() => seeProduct(produto)} className="product-image">
+                    <div onClick={() => seeProduct(produto)} key={produto.id} className="item-card" data-category="eletronicos">
+                        <div className="product-image">
                             <img className='product-image' src={produto.imagem[0]} width={200} height={180} alt="" />
                         </div>
 
-                        <p onClick={() => seeProduct(produto)} className="product-name">{produto.nome}</p>
+                        <p className="product-name">{produto.nome}</p>
 
                         <div className="product-price">R$ {produto.preco.toFixed(2)}</div>
                         <div className='d-flex flex-wrap align-items-center'>

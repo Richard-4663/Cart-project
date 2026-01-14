@@ -11,6 +11,7 @@
   background-color: var(--colorBackground);
   height: 100%;
   margin: 0;
+  font-family: zain;
 }
 
 .wrapper{

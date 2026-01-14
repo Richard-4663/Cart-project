@@ -30,11 +30,11 @@ export default function Carrossel({img1, img2, img3, img4, img5, img6, img7}){
               </div>
             </div>
             <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-              <i class="fa-solid fa-chevron-left setas-carousel"></i>
+              <i className="fa-solid fa-chevron-left setas-carousel"></i>
               <span className="visually-hidden">Previous</span>
             </button>
             <button className="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-              <i class="fa-solid fa-chevron-right setas-carousel"></i>
+              <i className="fa-solid fa-chevron-right setas-carousel"></i>
               <span className="visually-hidden">Next</span>
             </button>
           </div>
@@ -61,11 +61,11 @@ export default function Carrossel({img1, img2, img3, img4, img5, img6, img7}){
               </div>
             </div>
             <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators2" data-bs-slide="prev">
-              <i class="fa-solid fa-chevron-left setas-carousel"></i>
+              <i className="fa-solid fa-chevron-left setas-carousel"></i>
               <span className="visually-hidden">Previous</span>
             </button>
             <button className="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators2" data-bs-slide="next">
-              <i class="fa-solid fa-chevron-right setas-carousel"></i>
+              <i className="fa-solid fa-chevron-right setas-carousel"></i>
               <span className="visually-hidden">Next</span>
             </button>
           </div>

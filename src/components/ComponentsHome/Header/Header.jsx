@@ -10,7 +10,7 @@ export default function Header() {
 
   return (
     <header className="header">
-      <nav className="navbar p-3" >
+      <nav className="navbar p-0" >
         <div className="d-flex w-100 justify-content-center align-items-center flex-wrap" >
 
           <img id='logo' src="/assets/Logo/logo1.png" role='button' width="150" height="50" onClick={headerFunctions.handleLogoClick}/>

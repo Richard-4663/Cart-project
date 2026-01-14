@@ -17,6 +17,7 @@ import PriceSection from '../../components/ComponentsPageProducts/PriceSection/P
 import ImgProductSection from '../../components/ComponentsPageProducts/ImgProductSection/ImgProductSection.jsx';
 import DescriptionProductSection from '../../components/ComponentsPageProducts/DescriptionProductSection/DescriptionProductSection.jsx';
 import Footer from '../../components/ComponentsHome/Footer/Footer.jsx'
+import FullDescription from '../../components/ComponentsPageProducts/FullDescription/FullDescription.jsx';
 
 export default function ProductPage(){
 
@@ -41,6 +42,7 @@ export default function ProductPage(){
                   <ImgProductSection produto={produto} />
                   <DescriptionProductSection produto={produto}/>
                   <PriceSection produto={produto} />
+                  <FullDescription produto={produto}/>
 
                 </div>
           </div>
