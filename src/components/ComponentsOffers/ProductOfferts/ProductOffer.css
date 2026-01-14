@@ -1,0 +1,7 @@
+.text-discont{
+    position: absolute;
+    color: white;
+    background-color: var(--colorTheme);
+    padding: 5px;
+    border-bottom-right-radius: 10px;
+}

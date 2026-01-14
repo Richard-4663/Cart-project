@@ -41,6 +41,9 @@ export default function PriceSection({produto}){
     return(
         <div className='p-3 rounded-3 price-section'>
             <div className="product-price text-white">
+                {produto.precoOriginal && (
+                        <s><h3>R$ {produto.precoOriginal.toFixed(2)}</h3></s>
+                )}
                 <h1>R$ {Number(produto.preco).toFixed(2)}</h1>
                 <p className='fs-6'>À vista no PIX com 10% de desconto</p>
             </div>

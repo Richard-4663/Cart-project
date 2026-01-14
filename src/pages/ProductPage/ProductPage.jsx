@@ -4,6 +4,7 @@ import { useEffect } from 'react';
 
 //importando dados
 import {produtos} from '../../data/products.js'
+import { ofertasDoDia } from '../../data/offersDay.js';
 
 // importando funções
 import useWindowWidth from "../../hooks/useWindowWidth.js"
@@ -24,7 +25,7 @@ export default function ProductPage(){
     const largura = useWindowWidth();
     const [searchParams] = useSearchParams();
     const id = searchParams.get("id")
-    const produto = produtos.find(produto => produto.id == id) 
+    const produto = produtos.find(produto => produto.id == id) ||  ofertasDoDia.find(produto => produto.id == id)
 
     useEffect(() => {
         // Rolagem para o topo ao montar o componente
