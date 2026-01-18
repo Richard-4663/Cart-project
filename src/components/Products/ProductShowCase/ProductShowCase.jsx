@@ -56,10 +56,15 @@ export default function ProductShowCase({produtos}){
                             R$ {produto.preco.toFixed(2)}
                         </div>
                         <div className='d-flex flex-wrap align-items-center'>
-                            <i className="fa-solid fa-boxes-stacked me-2"></i>
-                            <h6 className={`stock-count ${produto.qntEstoque > 0 ? 'text-success': 'text-danger'}`}>
-                                {produto.qntEstoque > 0 ? 'Em estoque' : 'Produto indisponível'}
-                            </h6>
+                            {largura > 360 && (
+                                <div>
+                                    <i className="fa-solid fa-boxes-stacked me-2"></i>
+                                    <h6 className={`stock-count ${produto.qntEstoque > 0 ? 'text-success': 'text-danger'}`}>
+                                        {produto.qntEstoque > 0 ? 'Em estoque' : 'Produto indisponível'}
+                                    </h6>
+                                </div>
+                            )
+                            }
                         </div>
                     </div>
                 )}

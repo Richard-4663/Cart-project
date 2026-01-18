@@ -26,7 +26,7 @@
 .for-you-section {
   background-color: var(--colorWhite);
   border-radius: 8px;
-  padding: 1.5rem;
+  padding-top: 1rem;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
