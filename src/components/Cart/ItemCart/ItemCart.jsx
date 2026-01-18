@@ -1,7 +1,7 @@
-import './Cart.css'
+import './ItemCart.css'
 import SummaryCart from '../SummaryCart/SummaryCart.jsx'
 
-export default function Cart({ itemsCart, onClick, increment, decrement }) {
+export default function ItemCart({ itemsCart, onClick, increment, decrement }) {
   
   return (
     <div className="cart-section p-4 text-start rounded-3">

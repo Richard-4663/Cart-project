@@ -13,12 +13,13 @@ import useWindowWidth from "../../hooks/useWindowWidth.js"
 import './ProductPage.css'
 
 //importando Componentes
-import Header from '../../components/ComponentsHome/Header/Header.jsx'
-import PriceSection from '../../components/ComponentsPageProducts/PriceSection/PriceSection.jsx';
-import ImgProductSection from '../../components/ComponentsPageProducts/ImgProductSection/ImgProductSection.jsx';
-import DescriptionProductSection from '../../components/ComponentsPageProducts/DescriptionProductSection/DescriptionProductSection.jsx';
-import Footer from '../../components/ComponentsHome/Footer/Footer.jsx'
-import FullDescription from '../../components/ComponentsPageProducts/FullDescription/FullDescription.jsx';
+import Header from '../../components/Layout/Header/Header.jsx'
+import PriceSection from '../../components/PageProduct/PriceSection/PriceSection.jsx';
+import ImgProductSection from '../../components/PageProduct/ImgProductSection/ImgProductSection.jsx';
+import DescriptionProductSection from '../../components/PageProduct/DescriptionProductSection/DescriptionProductSection.jsx';
+import Footer from '../../components/Layout/Footer/Footer.jsx'
+import FullDescription from '../../components/PageProduct/FullDescription/FullDescription.jsx';
+import SuggestionProducts from '../../components/PageProduct/SuggestionsProducts/SuggestionsProducts.jsx';
 
 export default function ProductPage(){
 
@@ -44,7 +45,7 @@ export default function ProductPage(){
                   <DescriptionProductSection produto={produto}/>
                   <PriceSection produto={produto} />
                   <FullDescription produto={produto}/>
-
+                  <SuggestionProducts produto={produto}/>
                 </div>
           </div>
         <Footer />

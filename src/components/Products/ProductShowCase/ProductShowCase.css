@@ -1,12 +1,13 @@
 /* ===== CONTAINER PRINCIPAL ===== */
 .products {
     background-color: var(--colorGrey);
-    width: 80%;
+    width: 100%;
     padding: 10px;
     box-sizing: border-box;
     border-radius: 12px;
     overflow: hidden;
     border: 8px solid var(--colorWhite);
+    margin-top: 1em;
 }
 
 /* Preço */
@@ -21,17 +22,20 @@
     color: #333;
 }
 
+.text-discont{
+    position: absolute;
+    color: white;
+    background-color: var(--colorTheme);
+    padding: 5px;
+    border-bottom-right-radius: 10px;
+}
+
 .Btns {
     display: flex;
     gap: 10px;
     overflow-x: auto;
     padding: 10px 0;
     margin-bottom: 1rem;
-}
-
-.ofertas-dia{
-    background-color: rgba(92, 195, 243, 0.667);
-    border-radius: 0.5em;
 }
 
 /* ===== GRID DE PRODUTOS ===== */

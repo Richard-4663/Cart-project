@@ -1,4 +1,5 @@
 import { useState } from "react"
+import { useProdutos } from "./ContextProduct"
 
 export default function useCart(){
 

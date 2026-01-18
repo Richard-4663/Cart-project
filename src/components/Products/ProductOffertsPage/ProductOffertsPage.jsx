@@ -1,29 +1,29 @@
 //importando hooks
 import { useNavigate } from 'react-router'
 import { useState } from 'react';
-import UseWindowWitdth from '../../../hooks/useWindowWidth.js'
+import UseWindowWidth from '../../../hooks/useWindowWidth.js'
 
 //importando funções e estilos
 import useCart from '../../../hooks/useCart.js'
-import './ProductOffer.css'
+import './ProductOffertsPage.css'
 
 // importando componentes
-import Button from '../../ComponentsHome/Button/Button.jsx';
+import Button from '../../UI/Button/Button.jsx';
 import useWindowWidth from '../../../hooks/useWindowWidth.js';
 
+import { ofertasDoDia } from '../../../data/offersDay.js';
 
-export default function ProductsOffers({produtosOfertas}){
+export default function ProductsOffers(){
 
     const cartFunctions = useCart();
     const largura  = useWindowWidth();
+    const navigate = useNavigate();
+
 
     const [categoriaAtual, setCategoriaAtual] = useState('todos');
-    
-    const produtosFiltrados = cartFunctions.filtro(produtosOfertas, categoriaAtual);
+    const produtosFiltrados = cartFunctions.filtro(ofertasDoDia, categoriaAtual);
 
-    const navigate = useNavigate()
-    
-    function seeProduct(produto){
+        function seeProduct(produto){
 
         const query = new URLSearchParams()
         query.set('id', produto.id)
@@ -33,10 +33,7 @@ export default function ProductsOffers({produtosOfertas}){
 
 
     return (
-            <div className="products md-4 text-start rounded-3">
-                <div className='d-flex align-items-center p-2 mb-3 ofertas-dia'>
-                    <h3>🔥 Ofertas do dia</h3>
-                </div>
+            <div className="products md-4 text-start rounded-4">
 
                 <div className="Btns d-flex gap-4 flex-wrap">
                     <Button categoriaAtual={categoriaAtual} onclick={() => setCategoriaAtual('todos')} text={'Todos'} />

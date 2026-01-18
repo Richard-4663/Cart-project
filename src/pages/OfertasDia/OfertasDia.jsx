@@ -1,9 +1,8 @@
 // importando componentes
-import Header from '../../components/ComponentsHome/Header/Header.jsx'
-import Carrossel from '../../components/ComponentsHome/Carrossel/Carrossel.jsx'
-import Footer from '../../components/ComponentsHome/Footer/Footer.jsx'
-import Category from '../../components/ComponentsHome/Category/Category.jsx'
-import ProductsOffers from '../../components/ComponentsOffers/ProductOfferts/ProductOffers.jsx'
+import Header from '../../components/Layout/Header/Header.jsx'
+import Footer from '../../components/Layout/Footer/Footer.jsx'
+import Category from '../../components/UI/Category/Category.jsx'
+import ProductOffersPage from '../../components/Products/ProductOffertsPage/ProductOffertsPage.jsx'
 
 // importando dados e funções
 import {ofertasDoDia} from '../../data/offersDay.js'
@@ -19,15 +18,20 @@ export default function OfertasDia() {
     }, [])
 
   return (
-    <>
-    <Header />  
-    {/* <Carrossel img1={'/assets/imgCarrosel/img1.png'} img2={'/assets/imgCarrosel/img2.png'} img3={'/assets/imgCarrosel/img3.png'} img4={'/assets/imgCarrosel/img4.png'} img5={'/assets/imgCarrosel/img5.png'} img6={'/assets/imgCarrosel/img6.png'} img7={'/assets/imgCarrosel/img7.png'}/> */}
-    <div className="wrapper"> 
-      <ProductsOffers produtosOfertas={ofertasDoDia}/>
-      <Category />
-    </div>
-      <Footer />
-    </>
-    
-  )
+      <>
+        <Header />
+        <div className="wrapper">
+          <Category />
+          <div className="content-sections">
+  
+            <section className="offers-section">
+              <h2 className="section-title">🔥 Ofertas do dia</h2>
+              <ProductOffersPage produtosOferta={ofertasDoDia} />
+            </section>
+  
+          </div>
+        </div>
+        <Footer />
+      </>
+    )
 }
