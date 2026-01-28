@@ -47,7 +47,7 @@ export default function ItemCart() {
             {produtosCarrinho.map(item => (
               <div key={item.id} className="cart-item">
                 <div>
-                  <img src={item.imagem} width={100} alt={item.nome} />
+                  <img src={item.imagem[0]} width={100} alt={item.nome} />
                 </div>
                 <div className="cart-item-info">
                   <div className="cart-item-name">

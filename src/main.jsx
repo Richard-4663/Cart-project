@@ -1,4 +1,3 @@
-// main.jsx
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import { createBrowserRouter, RouterProvider } from "react-router-dom"
@@ -14,29 +13,14 @@ import Login from './pages/Login/Login.jsx'
 import OfertasDia from './pages/OfertasDia/OfertasDia.jsx'
 import Cart from './pages/Cart/Cart.jsx'
 
-// Componente Wrapper para envolver todas as rotas com os Providers
-const Root = () => (
-  <MeuProvider>
-    <CartContextProvider>
-      <App />
-    </CartContextProvider>
-  </MeuProvider>
-)
-
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Root />,
+    element: <App />,
   },
   {
     path: '/product',
-    element: (
-      <MeuProvider>
-        <CartContextProvider>
-          <ProductPage />
-        </CartContextProvider>
-      </MeuProvider>
-    )
+    element: <ProductPage />
   },
   {
     path: '/login',
@@ -44,28 +28,20 @@ const router = createBrowserRouter([
   },
   {
     path: '/ofertas',
-    element: (
-      <MeuProvider>
-        <CartContextProvider>
-          <OfertasDia />
-        </CartContextProvider>
-      </MeuProvider>
-    )
+    element: <OfertasDia />
   },
   {
     path: '/cart',
-    element: (
-      <MeuProvider>
-        <CartContextProvider>
-          <Cart />
-        </CartContextProvider>
-      </MeuProvider>
-    )
+    element: <Cart />
   }
 ])
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <RouterProvider router={router} />
+    <MeuProvider>
+      <CartContextProvider>
+        <RouterProvider router={router} />
+      </CartContextProvider>
+    </MeuProvider>
   </StrictMode>,
 )
