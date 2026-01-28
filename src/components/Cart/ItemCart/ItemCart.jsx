@@ -6,7 +6,7 @@ import Footer from  '../../Layout/Footer/Footer.jsx'
 import SummaryCart from '../SummaryCart/SummaryCart.jsx'
 
 //importando hooks
-import { useCart } from '../../../hooks/CartContext.jsx'
+import { useCart } from '../../../context/CartContext.jsx'
 
 export default function ItemCart() {
   

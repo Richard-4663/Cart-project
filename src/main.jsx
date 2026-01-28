@@ -4,8 +4,8 @@ import { createRoot } from 'react-dom/client'
 import { createBrowserRouter, RouterProvider } from "react-router-dom"
 
 // Importando Providers
-import { CartContextProvider } from './hooks/CartContext.jsx'
-import { MeuProvider } from './hooks/ContextProduct.jsx'
+import { CartContextProvider } from './context/CartContext.jsx'
+import { MeuProvider } from './context/ContextProduct.jsx'
 
 // Importando Páginas
 import App from './App.jsx'

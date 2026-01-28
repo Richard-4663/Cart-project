@@ -17,8 +17,8 @@ import ProductsOffers from './components/Products/ProductOffertsPage/ProductOffe
 import PriceSection from './components/PageProduct/PriceSection/PriceSection.jsx'
 
 // importando hooks para os dados
-import { CartContextProvider } from './hooks/CartContext.jsx'
-import { MeuProvider } from './hooks/ContextProduct.jsx'
+import { CartContextProvider } from './context/CartContext.jsx'
+import { MeuProvider } from './context/ContextProduct.jsx'
 import { ofertasDoDia } from './data/offersDay.js'
 
 

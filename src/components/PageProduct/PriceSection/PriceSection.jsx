@@ -3,8 +3,9 @@ import './Price-section.css'
 //importando hooks
 import { useState } from "react"
 import useWindowWidth from "../../../hooks/useWindowWidth.js"
-import { useCart } from '../../../hooks/CartContext.jsx'
+import { useCart } from '../../../context/CartContext.jsx'
 import { useNavigate } from 'react-router'
+import { buscarCEP, limparCEP, validarCEP, formatarCEP } from '../../../services/cepService.js'
 
 export default function PriceSection({ produto }) {
     const { AddItemCart } = useCart();
@@ -21,24 +22,19 @@ export default function PriceSection({ produto }) {
         setErroCEP('')
         setExibirCEP(null) 
         
-        try {
-            const resp = await fetch(`https://brasilapi.com.br/api/cep/v1/${cep}`)
-            if (resp.ok) {
-                const obj = await resp.json()
-                setExibirCEP(obj)
-            } else {
-                setErroCEP('CEP não encontrado')
-            }
-        } catch (error) {
-            setErroCEP('Erro ao buscar CEP')
+        const resultado = await buscarCEP(cep);
+        if (resultado.sucesso) {
+            setExibirCEP(resultado.dados);
+        } else {
+            setErroCEP(resultado.erro);
         }
     }
     
     const handleSubmit = (e) => {
         e.preventDefault();
-        const cepLimpo = CEP.replace(/\D/g, '');
+        const cepLimpo = limparCEP(CEP);
         
-        if (cepLimpo.length === 8) {
+        if (validarCEP(CEP)) {
             BuscarCEP(cepLimpo)
         } else {
             setErroCEP('Digite um CEP válido (8 dígitos)')
@@ -46,8 +42,7 @@ export default function PriceSection({ produto }) {
     }
 
     const formatarCepExibicao = (cep) => {
-        if (cep.length <= 5) return cep
-        return `${cep.slice(0,5)}-${cep.slice(5,8)}`
+        return formatarCEP(cep)
     }
 
     const handleAddToCart = () => {
