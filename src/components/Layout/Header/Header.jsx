@@ -36,8 +36,8 @@ export default function Header() {
           </div>
 
 
-          <div className="d-flex align-items-center ms-5">
-            <button className="btn-nav btn-login me-3" style={{width: 200}} onClick={routesFunctions.handleLoginClick}><i className="fa-solid fa-user"></i>Entrar/Cadastre-se</button>
+          <div className="d-flex align-items-center ms-3 gap-3">
+            <button className="btn-nav" id='btn-login' style={{width: 200}} onClick={routesFunctions.handleLoginClick}><i className="fa-solid fa-user"></i>Entrar/Cadastre-se</button>
             <button className="btn-nav btn-login" style={{width: 100}} onClick={routesFunctions.handleCartClick}><i className="fa-solid fa-cart-shopping"></i></button>
           </div>
         </div>

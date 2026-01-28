@@ -26,9 +26,14 @@
   background: #2c193f;
 }
 
+#btn-login{
+  width: auto;
+  padding: 7px;
+}
+
 
 @media (max-width: 1140px) {
-  #logo, .btn-login{
+  #logo, #btn-login{
     display: none;
   }
   .search{

@@ -55,13 +55,10 @@ export default function ProductShowCase({produtos}){
                             }
                             R$ {produto.preco.toFixed(2)}
                         </div>
-                        <div className='d-flex flex-wrap align-items-center'>
+                        <div>
                             {largura > 360 && (
                                 <div>
-                                    <i className="fa-solid fa-boxes-stacked me-2"></i>
-                                    <h6 className={`stock-count ${produto.qntEstoque > 0 ? 'text-success': 'text-danger'}`}>
-                                        {produto.qntEstoque > 0 ? 'Em estoque' : 'Produto indisponível'}
-                                    </h6>
+                                    <button className='btn btn-plus'>Ver detalhes</button>
                                 </div>
                             )
                             }
@@ -73,7 +70,7 @@ export default function ProductShowCase({produtos}){
 
                 {quantidadeVisivelAmostras < produtosOferta.totalFiltrados && (
                     <div className="text-center mt-4">
-                        <button className="btn btn-nav" onClick={() => navigate('/ofertas')}>
+                        <button className="btn btn-plus" onClick={() => navigate('/ofertas')}>
                             Ver Mais Produtos
                         </button>   
                     </div>

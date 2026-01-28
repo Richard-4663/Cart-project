@@ -34,7 +34,7 @@ export default function ProductsOffers(){
     return (
             <div className="products md-4 text-start rounded-4">
 
-                <div className="Btns d-flex gap-4 flex-wrap">
+                <div className="Btns p-3 d-flex gap-4 flex-wrap">
                     <Button categoriaAtual={categoriaAtual} onclick={() => setCategoriaAtual('todos')} text={'Todos'} />
                     <Button categoriaAtual={categoriaAtual} onclick={() => setCategoriaAtual('eletronicos')} text={'Eletronicos'}/>
                     <Button categoriaAtual={categoriaAtual} onclick={() => setCategoriaAtual('roupas')} text={'Roupas'}/>
@@ -58,7 +58,7 @@ export default function ProductsOffers(){
                             R$ {produto.preco.toFixed(2)}
                         </div>
                         <div className='d-flex flex-wrap align-items-center'>
-                            <i className="fa-solid fa-boxes-stacked me-2"></i><h6 className={`stock-count ${produto.qntEstoque > 0 ? 'text-success': 'text-danger'}`}>{produto.qntEstoque > 0 ? 'Em estoque' : 'Produto indisponível'}</h6>
+                            <button className='btn-plus'>Ver detalhes</button>
                         </div>
                     </div>
                 )}

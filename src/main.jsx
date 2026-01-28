@@ -26,7 +26,7 @@ const Root = () => (
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Root />, // Use o wrapper aqui
+    element: <Root />,
   },
   {
     path: '/product',

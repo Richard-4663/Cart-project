@@ -30,14 +30,6 @@
     border-bottom-right-radius: 10px;
 }
 
-.Btns {
-    display: flex;
-    gap: 10px;
-    overflow-x: auto;
-    padding: 10px 0;
-    margin-bottom: 1rem;
-}
-
 /* ===== GRID DE PRODUTOS ===== */
 .items {
     display: grid;
@@ -86,7 +78,7 @@
     flex-shrink: 0;
 }
 
-.btn-nav{
+.btn-plus{
   width: 100%;
   padding: 10px;
   background:#764ba2 ;
@@ -98,7 +90,7 @@
   transition: 0.3s;
 }
 
-.btn-nav:hover{
+.btn-plus:hover{
   background: #2c193f;
   color: white;
 }

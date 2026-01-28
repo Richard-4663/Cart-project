@@ -53,11 +53,8 @@ export default function Products(){
                         <p className="product-name">{produto.nome}</p>
 
                         <div className="product-price">R$ {produto.preco.toFixed(2)}</div>
-                        <div className='d-flex flex-wrap align-items-center'>
-                            <i className="fa-solid fa-boxes-stacked me-2"></i>
-                            <h6 className={`stock-count ${produto.qntEstoque > 0 ? 'text-success': 'text-danger'}`}>
-                                {produto.qntEstoque > 0 ? 'Em estoque' : 'Produto indisponível'}
-                            </h6>
+                        <div>
+                            <button className='btn btn-plus'>Ver detalhes</button>
                         </div>
                     </div>
                 )}
@@ -66,7 +63,7 @@ export default function Products(){
 
                 {quantidadeVisivelScroolInfinite < produtosParaVoce.totalFiltrados && (
                     <div className="text-center mt-4">
-                        <button className="btn btn-nav" onClick={() => setquantidadeVisivelScroolInfinite(prev => prev + 10)}>
+                        <button className="btn btn-plus" onClick={() => setquantidadeVisivelScroolInfinite(prev => prev + 10)}>
                             Ver Mais Produtos ({produtosParaVoce.totalFiltrados - quantidadeVisivelScroolInfinite} restantes)
                         </button>   
                     </div>

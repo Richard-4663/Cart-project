@@ -1,4 +1,4 @@
-/* ===== CONTAINER PRINCIPAL ===== */
+/* CONTAINER PRINCIPAL */
 .products {
     background-color: var(--colorGrey);
     width: 100%;
@@ -17,20 +17,12 @@
     margin-bottom: 8px;
 }
 
-/* ===== HEADER ===== */
+/* HEADER */
 .products h2 {
     color: #333;
 }
 
-.Btns {
-    display: flex;
-    gap: 10px;
-    overflow-x: auto;
-    padding: 10px 0;
-    margin-bottom: 1rem;
-}
-
-/* ===== GRID DE PRODUTOS ===== */
+/* GRID DE PRODUTOS */
 .items {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
@@ -38,7 +30,7 @@
     width: 100%;
 }
 
-/* ===== CARD DESKTOP ===== */
+/* CARD DESKTOP */
 .item-card {
     width: 100%;
     background: white;
@@ -78,7 +70,7 @@
     flex-shrink: 0;
 }
 
-.btn-nav{
+.btn-plus{
   width: 100%;
   padding: 10px;
   background:#764ba2 ;
@@ -90,12 +82,12 @@
   transition: 0.3s;
 }
 
-.btn-nav:hover{
+.btn-plus:hover{
   background: #2c193f;
   color: white;
 }
 
-/* ===== MOBILE (2 COLUNAS - ESTILO SHOPEE) ===== */
+/* MOBILE (2 COLUNAS - ESTILO SHOPEE) */
 @media (max-width: 768px) {
 
     .products {
@@ -136,7 +128,7 @@
     
 }
 
-/* ===== TELAS MUITO PEQUENAS ===== */
+/* TELAS MUITO PEQUENAS */
 @media (max-width: 360px) {
 
     .wrapper{
@@ -170,7 +162,7 @@
     
 }
 
-/* ===== TABLET ===== */
+/* TABLET */
 @media (min-width: 769px) and (max-width: 1024px) {
     .items {
         grid-template-columns: repeat(3, 1fr);
@@ -189,7 +181,7 @@
     }
 }
 
-/* ===== DESKTOP GRANDE ===== */
+/* DESKTOP GRANDE  */
 @media (min-width: 1025px) {
     .item-card:hover {
         cursor: pointer;
