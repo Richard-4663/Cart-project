@@ -1,18 +1,19 @@
-import { useState } from "react"
-import { useProdutos } from "./ContextProduct"
+import { createContext, useContext, useState } from "react";
 
-export default function useCart(){
+export const CartContext = createContext();
 
-    const [produtosCarrinho, setProdutosCarrinho] = useState([])
-
+export function CartContextProvider({ children }) {
+    
+  //mudar as msgs de alerta para modais futuramente
     function AddItemCart(produto){
     const ItemExist = produtosCarrinho.find(item => item.id == produto.id)
 
     if (ItemExist){
         alert("item já está no carrinho")
     }else{
-        produto.quantidadeCarrinho = 1
+        produto.quantidadeCarrinho = 1  
         setProdutosCarrinho([...produtosCarrinho, produto])
+        alert("item adicionado ao carrinho")
     }
     }
 
@@ -31,20 +32,23 @@ export default function useCart(){
         )
     )};
 
+    // CORRIJA ASSIM:
     const decrementQuantity = (itemId) => {
-    setProdutosCarrinho(prevCart =>
-        prevCart.map(item => {
-        if (item.id === itemId) {
-            const newQuantity = item.quantidadeCarrinho - 1;
-            if (newQuantity <= 0) {
-            // Remove o item se chegar a 0
-            return 0;
-            }
-            return { ...item, quantidadeCarrinho: newQuantity };
+  setProdutosCarrinho(prevCart =>
+    prevCart.map(item => {
+      if (item.id === itemId) {
+        const newQuantity = item.quantidadeCarrinho - 1;
+        if (newQuantity <= 0) {
+          // Remove o item do carrinho
+          return null;
         }
-        return item;
-        }).filter(Boolean) // Remove nulls
-    )};
+        return { ...item, quantidadeCarrinho: newQuantity };
+      }
+      return item;
+    }).filter(item => item !== null) // Remove os itens null
+    );
+    };
+    
 
     const filtro = (produtos, categoria) => {
 
@@ -63,14 +67,19 @@ export default function useCart(){
         }
     };
 
-    
-    return {
-    produtosCarrinho,
-    AddItemCart,
-    removeItemCart,
-    incrementQuantity,
-    decrementQuantity,
-    filtro
-  }
+  const [produtosCarrinho, setProdutosCarrinho] = useState([]);
+
+  return (
+    <CartContext.Provider value={{ produtosCarrinho, setProdutosCarrinho, AddItemCart, removeItemCart, incrementQuantity, decrementQuantity, filtro }}>
+      {children}
+    </CartContext.Provider>
+  );
 }
 
+export function useCart() {
+    const context = useContext(CartContext);
+    if (!context) {
+        throw new Error("useCart deve ser usado dentro de um CartContextProvider");
+    }  
+    return context;
+}

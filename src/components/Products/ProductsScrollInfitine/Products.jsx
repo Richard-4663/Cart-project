@@ -6,7 +6,7 @@ import { useState } from 'react'
 import './Products.css'
 
 //importando hooks
-import useCart from '../../../hooks/useCart.js'
+import { useCart } from '../../../hooks/CartContext.jsx'
 import { useProdutos } from '../../../hooks/ContextProduct.jsx'
 
 export default function Products(){

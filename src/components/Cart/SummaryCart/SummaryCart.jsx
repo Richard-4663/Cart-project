@@ -40,7 +40,7 @@ const discontFormated = valorDesconto.toLocaleString('pt-BR', {
           <span id="qtn-itens">
             <i className="fas fa-shopping-basket"></i> Subtotal: ({productsCart.length} itens):
           </span>
-          <span id="subtotal">R$ 0,00</span>
+          <span id="subtotal">R$ {subtotal.toFixed(2)}</span>
         </div>
 
         <div className="total-line">
@@ -62,7 +62,7 @@ const discontFormated = valorDesconto.toLocaleString('pt-BR', {
           <span id="total">{totalFormatado}</span>
         </div>
 
-        <button className="btn-add p-3 fs-4">Finalizar Compra ({productsCart.length} Itens)</button>
+        <button className="btn-checkout p-3 fs-4" disabled={productsCart.length < 1}>Finalizar Compra ({productsCart.length} Itens)</button>
       </div>
     )
 }

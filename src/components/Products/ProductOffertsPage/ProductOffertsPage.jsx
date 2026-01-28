@@ -1,15 +1,14 @@
 //importando hooks
 import { useNavigate } from 'react-router'
 import { useState } from 'react';
-import UseWindowWidth from '../../../hooks/useWindowWidth.js'
+import useWindowWidth from '../../../hooks/useWindowWidth.js'
 
 //importando funções e estilos
-import useCart from '../../../hooks/useCart.js'
+import { useCart } from '../../../hooks/CartContext.jsx'
 import './ProductOffertsPage.css'
 
 // importando componentes
 import Button from '../../UI/Button/Button.jsx';
-import useWindowWidth from '../../../hooks/useWindowWidth.js';
 
 import { ofertasDoDia } from '../../../data/offersDay.js';
 

@@ -4,7 +4,7 @@ import { useState } from 'react'
 import useWindowWidth from '../../../hooks/useWindowWidth.js'
 
 //importando funções e estilos
-import useCart from '../../../hooks/useCart.js'
+import { useCart } from '../../../hooks/CartContext.jsx'
 import './ProductShowCase.css'
 
 export default function ProductShowCase({produtos}){
