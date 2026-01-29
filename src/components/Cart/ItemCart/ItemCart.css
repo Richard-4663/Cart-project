@@ -1,8 +1,4 @@
-.cart-section{
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    gap: 2em;
-}
+
 
 .container-geral{
     background-color: #ececec;

@@ -1,6 +1,6 @@
 import './SummaryCart.css'
 
-export default function SummaryCart({productsCart}){
+export default function SummaryCart({itemsCart}){
   
 const calcularDiscont = (subtotal) => {
   if (subtotal < 100) return 0
@@ -8,7 +8,7 @@ const calcularDiscont = (subtotal) => {
   return 30
 }
 
-const subtotal = productsCart?.reduce(
+const subtotal = itemsCart?.reduce(
   (acc, produto) => acc + produto.preco,
   0
 ) || 0
@@ -38,7 +38,7 @@ const discontFormated = valorDesconto.toLocaleString('pt-BR', {
     <div className="cart-total">
         <div className="total-line">
           <span id="qtn-itens">
-            <i className="fas fa-shopping-basket"></i> Subtotal: ({productsCart.length} itens):
+            <i className="fas fa-shopping-basket"></i> Subtotal: ({itemsCart.length} itens):
           </span>
           <span id="subtotal">R$ {subtotal.toFixed(2)}</span>
         </div>
@@ -62,7 +62,7 @@ const discontFormated = valorDesconto.toLocaleString('pt-BR', {
           <span id="total">{totalFormatado}</span>
         </div>
 
-        <button className="btn-checkout p-3 fs-4" disabled={productsCart.length < 1}>Finalizar Compra ({productsCart.length} Itens)</button>
+        <button className="btn-checkout p-3 fs-4" disabled={itemsCart.length < 1}>Finalizar Compra ({itemsCart.length} Itens)</button>
       </div>
     )
 }

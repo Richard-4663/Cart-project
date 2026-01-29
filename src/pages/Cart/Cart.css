@@ -1,0 +1,23 @@
+.cart-section {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 2em;
+    align-items: start;
+}
+
+.cart-items-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.empty-cart {
+    background-color: #f8f9fa;
+    border: 1px solid #dee2e6;
+    color: #666;
+}
+
+@media (max-width: 768px) {
+    .cart-section {
+        grid-template-columns: 1fr;
+    }
+}
