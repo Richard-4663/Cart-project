@@ -1,3 +1,5 @@
+import { toast } from 'react-toastify';
+
 import './Price-section.css'
 
 //importando hooks
@@ -37,7 +39,7 @@ export default function PriceSection({ produto }) {
         if (validarCEP(CEP)) {
             BuscarCEP(cepLimpo)
         } else {
-            setErroCEP('Digite um CEP válido (8 dígitos)')
+            toast.error('Digite um CEP válido (8 dígitos)')
         }
     }
 
@@ -86,7 +88,7 @@ export default function PriceSection({ produto }) {
                         onClick={handleAddToCart}
                     >
                         <i className="fas fa-cart-plus"></i> Adicionar
-                    </button>
+                    </button> 
                 </div>
             </div>
 
@@ -108,12 +110,6 @@ export default function PriceSection({ produto }) {
                     </button>
                 </form>
                 
-                {erroCEP && (
-                    <div className="mt-2 text-danger">
-                        <i className="fas fa-exclamation-circle me-2"></i>
-                        {erroCEP}
-                    </div>
-                )}
                 
                 {exibirCEP && !erroCEP && ( 
                     <div className="mt-3">

@@ -1,7 +1,4 @@
-import 'bootstrap/dist/css/bootstrap.min.css'
-import 'bootstrap/dist/js/bootstrap.bundle.min'
-import './App.css'
-
+// Importando componentes
 import Header from './components/Layout/Header/Header.jsx'
 import Footer from './components/Layout/Footer/Footer.jsx'
 import Carrossel from './components/Layout/Carrossel/Carrossel.jsx'
@@ -9,11 +6,13 @@ import Products from './components/Products/ProductsScrollInfitine/Products.jsx'
 import ProductShowCase from './components/Products/ProductShowCase/ProductShowCase.jsx'
 import Category from './components/UI/Category/Category.jsx'
 
-import ItemCart from './components/Cart/ItemCart/ItemCart.jsx'
-import ProductsOffers from './components/Products/ProductOffertsPage/ProductOffertsPage.jsx'
-import PriceSection from './components/PageProduct/PriceSection/PriceSection.jsx'
-
+// Importando dados
 import { ofertasDoDia } from './data/offersDay.js'
+
+// Importando estilos globais
+import 'bootstrap/dist/css/bootstrap.min.css'
+import 'bootstrap/dist/js/bootstrap.bundle.min'
+import './App.css'
 
 function App() {
   return (

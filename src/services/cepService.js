@@ -1,3 +1,5 @@
+import { toast } from 'react-toastify';
+
 const BASE_URL = 'https://brasilapi.com.br/api/cep/v1';
 
 export const buscarCEP = async (cep) => {
@@ -18,7 +20,7 @@ export const buscarCEP = async (cep) => {
         return {
             sucesso: false,
             dados: null,
-            erro: error.message || 'Erro ao buscar CEP'
+            erro: toast.error(error.message)
         };
     }
 };

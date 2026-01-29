@@ -1,28 +1,33 @@
 import { createContext, useContext, useState } from "react";
+import { toast } from 'react-toastify';
 
 export const CartContext = createContext();
 
 export function CartContextProvider({ children }) {
-    
-  //mudar as msgs de alerta para modais futuramente
+
     function AddItemCart(produto){
     const ItemExist = produtosCarrinho.find(item => item.id == produto.id)
 
     if (ItemExist){
-        alert("item já está no carrinho")
+        toast.error('⚠️ Produto já está no carrinho!', {
+          autoClose: 2000,
+        });
     }else{
         produto.quantidadeCarrinho = 1  
         setProdutosCarrinho([...produtosCarrinho, produto])
-        alert("item adicionado ao carrinho")
-    }
-    }
+        toast.success('✅ Produto adicionado ao carrinho!', {
+          autoClose: 2000,
+        });
+        }
+      }
 
     function removeItemCart(id){
     const filtro = produtosCarrinho.filter(produto => produto.id != id)
     setProdutosCarrinho(filtro)
+    toast.success('🗑️ Produto removido do carrinho!', {
+    });
     }
-    
-    //ESTUDAR ISSO AQUI URGENTEMENTE
+
     const incrementQuantity = (itemId) => {
     setProdutosCarrinho(prevCart =>
         prevCart.map(item =>
@@ -32,9 +37,8 @@ export function CartContextProvider({ children }) {
         )
     )};
 
-    // CORRIJA ASSIM:
     const decrementQuantity = (itemId) => {
-  setProdutosCarrinho(prevCart =>
+    setProdutosCarrinho(prevCart =>
     prevCart.map(item => {
       if (item.id === itemId) {
         const newQuantity = item.quantidadeCarrinho - 1;

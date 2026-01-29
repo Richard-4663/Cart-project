@@ -33,7 +33,7 @@
 
 
 @media (max-width: 1140px) {
-  #logo, #btn-login{
+  #logo, #btn-login, #btn-cart{
     display: none;
   }
   .search{
