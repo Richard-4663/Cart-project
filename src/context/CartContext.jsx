@@ -9,13 +9,13 @@ export function CartContextProvider({ children }) {
     const ItemExist = produtosCarrinho.find(item => item.id == produto.id)
 
     if (ItemExist){
-        toast.error('⚠️ Produto já está no carrinho!', {
+        toast.error('Produto já está no carrinho!', {
           autoClose: 2000,
         });
     }else{
         produto.quantidadeCarrinho = 1  
         setProdutosCarrinho([...produtosCarrinho, produto])
-        toast.success('✅ Produto adicionado ao carrinho!', {
+        toast.success('Produto adicionado ao carrinho!', {
           autoClose: 2000,
         });
         }
@@ -24,7 +24,7 @@ export function CartContextProvider({ children }) {
     function removeItemCart(id){
     const filtro = produtosCarrinho.filter(produto => produto.id != id)
     setProdutosCarrinho(filtro)
-    toast.success('🗑️ Produto removido do carrinho!', {
+    toast.success('Produto removido do carrinho!', {
     });
     }
 
